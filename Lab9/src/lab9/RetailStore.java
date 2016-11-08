@@ -83,7 +83,7 @@ public class RetailStore
             sum += table[i][hourNum];
             System.out.println(table[i][hourNum]);
         }
-        average = sum / rows;
+        average = sum / rows; //average for columns
         System.out.println("");
         outputMsg = "";
         outputMsg += "\n for hour number " + (hourNum + 1);
@@ -99,7 +99,7 @@ public class RetailStore
             sum += table[i][hourNum];
             System.out.println(table[i][hourNum]);
         }
-        average = sum / rows;
+        average = sum / rows; //average for rows
         System.out.println("");
         outputMsg = "";
         outputMsg += "\n for hour number " + (hourNum + 1);
