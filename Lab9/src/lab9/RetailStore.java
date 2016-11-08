@@ -8,23 +8,18 @@ import java.util.Scanner;
 import java.util.Random;
 import javax.swing.JOptionPane;
 // Colby Underhill
-
 public class RetailStore
 {
-
     Scanner scan = new Scanner(System.in);
-
     public static void main(String args[])
     {
         int rows = 6;
         int columns = 8;
         int[][] table = new int[rows][columns];
-
         Random randomGen = new Random();
         StringBuilder s = new StringBuilder();
         int randomInt1 = 0;
         int randomInt2 = 0;
-
         // generate column titles
         for (int j = 0; j < columns; j++)
         {
@@ -58,31 +53,25 @@ public class RetailStore
         }
         System.out.println("data simulation: \n\n" + s);
         System.out.println("");
-
         // perform data analysis
         // row analysis
-        String str
-                = JOptionPane.showInputDialog(null, "enter a cashier lane number : ");
+        String str = JOptionPane.showInputDialog(null, "enter a cashier lane number : ");
         // subtract 1 to compensate for a zero indexed array
         int laneNum = Integer.parseInt(str) - 1;
         double average = 0.0, sum = 0.0;
-
         for (int j = 0; j < columns; j++)
         {
             sum += table[laneNum][j];
         }
         average = sum / columns;
         System.out.println("");
-
         String outputMsg = "";
         outputMsg += "\n for cashier lane " + (laneNum + 1);
         outputMsg += "\n the data analysis is: ";
         outputMsg += "\n customer count -> " + Math.round(sum);
         outputMsg += "\n average -> " + Math.round(average);
-
         JOptionPane.showMessageDialog(null, outputMsg,
                 "Data Row Analysis", JOptionPane.PLAIN_MESSAGE);
-
         // column analysis
         str = JOptionPane.showInputDialog(null, "enter an hour number : ");
         // subtract 1 to compensate for a zero indexed array
@@ -96,17 +85,14 @@ public class RetailStore
         }
         average = sum / rows;
         System.out.println("");
-
         outputMsg = "";
         outputMsg += "\n for hour number " + (hourNum + 1);
         outputMsg += "\n the data analysis is: ";
         outputMsg += "\n customer count -> " + Math.round(sum);
         outputMsg += "\n average -> " + Math.round(average);
-
         JOptionPane.showMessageDialog(null, outputMsg,
                 "Data Column Analysis", JOptionPane.PLAIN_MESSAGE);
-
-// reset the accumulating variable
+        // reset the accumulating variable
         sum = 0;
         for (int i = 0; i < rows; i++)
         {
@@ -115,13 +101,11 @@ public class RetailStore
         }
         average = sum / rows;
         System.out.println("");
-
         outputMsg = "";
         outputMsg += "\n for hour number " + (hourNum + 1);
         outputMsg += "\n the data analysis is: ";
         outputMsg += "\n customer count -> " + Math.round(sum);
         outputMsg += "\n average -> " + Math.round(average);
-
         JOptionPane.showMessageDialog(null, outputMsg,
                 "Data Column Analysis", JOptionPane.PLAIN_MESSAGE);
     }
