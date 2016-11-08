@@ -13,8 +13,8 @@ public class RetailStore
     Scanner scan = new Scanner(System.in);
     public static void main(String args[])
     {
-        int rows = 6;
-        int columns = 8;
+        int rows = 7;  //lanes
+        int columns = 8; //hours
         int[][] table = new int[rows][columns];
         Random randomGen = new Random();
         StringBuilder s = new StringBuilder();
