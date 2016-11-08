@@ -126,5 +126,5 @@ public class RetailStore
 	  JOptionPane.showMessageDialog(null, outputMsg,
 	  "Data Column Analysis", JOptionPane.PLAIN_MESSAGE);
   }
-{
+}
 
