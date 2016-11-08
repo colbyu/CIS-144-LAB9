@@ -9,11 +9,13 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 // Colby Underhill
 
-public class RetailStore {
+public class RetailStore
+{
 
     Scanner scan = new Scanner(System.in);
 
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         int rows = 6;
         int columns = 8;
         int[][] table = new int[rows][columns];
@@ -24,22 +26,28 @@ public class RetailStore {
         int randomInt2 = 0;
 
         // generate column titles
-        for (int j = 0; j < columns; j++) {
+        for (int j = 0; j < columns; j++)
+        {
             s.append("\thr " + (j + 1));
         }
         s.append("\n\n");
         // populate data for each cashier lane
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < rows; i++)
+        {
             s.append("lane " + (i + 1));
             s.append("\t");
-            for (int j = 0; j < columns; j++) {
+            for (int j = 0; j < columns; j++)
+            {
                 // express checkout lane
                 randomInt1 = 1 + randomGen.nextInt(20);
                 // standard checkout lane
                 randomInt2 = 1 + randomGen.nextInt(10);
-                if (i == 0) {
+                if (i == 0)
+                {
                     table[i][j] = randomInt1;
-                } else {
+                }
+                else
+                {
                     table[i][j] = randomInt2;
                 }
                 s.append(table[i][j]);
@@ -59,7 +67,8 @@ public class RetailStore {
         int laneNum = Integer.parseInt(str) - 1;
         double average = 0.0, sum = 0.0;
 
-        for (int j = 0; j < columns; j++) {
+        for (int j = 0; j < columns; j++)
+        {
             sum += table[laneNum][j];
         }
         average = sum / columns;
@@ -80,7 +89,8 @@ public class RetailStore {
         int hourNum = Integer.parseInt(str) - 1;
         // reset the accumulating variable
         sum = 0;
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < rows; i++)
+        {
             sum += table[i][hourNum];
             System.out.println(table[i][hourNum]);
         }
@@ -98,7 +108,8 @@ public class RetailStore {
 
 // reset the accumulating variable
         sum = 0;
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < rows; i++)
+        {
             sum += table[i][hourNum];
             System.out.println(table[i][hourNum]);
         }
