@@ -105,7 +105,7 @@ public class RetailStore
         outputMsg += "\n for hour number " + (hourNum + 1);
         outputMsg += "\n the data analysis is: ";
         outputMsg += "\n customer count -> " + Math.round(sum);
-        outputMsg += "\n average -> " + Math.round(average);
+        outputMsg += "\n average for hour number -> " + Math.round(average);
         JOptionPane.showMessageDialog(null, outputMsg,
                 "Data Column Analysis", JOptionPane.PLAIN_MESSAGE);
     }
